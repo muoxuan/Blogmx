@@ -1,0 +1,16 @@
+server:
+  port: 10002
+spring:
+  application:
+    name: blogmx-gateway
+eureka:
+  client:
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: http://127.0.0.1:10001/eureka
+zuul:
+  prefix: /api
+  routes:
+    blogmx-blog: /bl/** # 路由到获取博客的微服务
+  add-host-header: true
+  sensitive-headers: #覆盖默认敏感头信息

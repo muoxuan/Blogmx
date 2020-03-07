@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="blogmx-gateway" />
+        <module name="blogmx-image" />
+        <module name="blogmx-upload" />
         <module name="blogmx-registry" />
         <module name="blogmx-blog" />
       </profile>
@@ -15,14 +17,18 @@
       <module name="blogmx" target="1.8" />
       <module name="blogmx-blog" target="1.8" />
       <module name="blogmx-gateway" target="1.8" />
+      <module name="blogmx-image" target="1.8" />
       <module name="blogmx-registry" target="1.8" />
+      <module name="blogmx-upload" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="blogmx-blog" options="-parameters" />
       <module name="blogmx-gateway" options="-parameters" />
+      <module name="blogmx-image" options="-parameters" />
       <module name="blogmx-registry" options="-parameters" />
+      <module name="blogmx-upload" options="-parameters" />
     </option>
   </component>
 </project>

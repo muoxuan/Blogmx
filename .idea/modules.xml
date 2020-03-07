@@ -5,7 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/blogmx.iml" filepath="$PROJECT_DIR$/blogmx.iml" />
       <module fileurl="file://$PROJECT_DIR$/blogmx-blog/blogmx-blog.iml" filepath="$PROJECT_DIR$/blogmx-blog/blogmx-blog.iml" />
       <module fileurl="file://$PROJECT_DIR$/blogmx-gateway/blogmx-gateway.iml" filepath="$PROJECT_DIR$/blogmx-gateway/blogmx-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blogmx-image/blogmx-image.iml" filepath="$PROJECT_DIR$/blogmx-image/blogmx-image.iml" />
       <module fileurl="file://$PROJECT_DIR$/blogmx-registry/blogmx-registry.iml" filepath="$PROJECT_DIR$/blogmx-registry/blogmx-registry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blogmx-upload/blogmx-upload.iml" filepath="$PROJECT_DIR$/blogmx-upload/blogmx-upload.iml" />
     </modules>
   </component>
 </project>

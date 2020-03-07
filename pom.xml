@@ -12,6 +12,8 @@
         <module>blogmx-registry</module>
         <module>blogmx-blog</module>
         <module>blogmx-gateway</module>
+        <module>blogmx-upload</module>
+        <module>blogmx-image</module>
     </modules>
 
     <parent>

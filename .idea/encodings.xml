@@ -4,6 +4,8 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/blogmx-blog" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/blogmx-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blogmx-image" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/blogmx-registry" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blogmx-upload" charset="UTF-8" />
   </component>
 </project>

@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="blogmx-gateway" />
-        <module name="blogmx-image" />
-        <module name="blogmx-upload" />
-        <module name="blogmx-registry" />
         <module name="blogmx-blog" />
+        <module name="mxblog-common" />
+        <module name="blogmx-gateway" />
+        <module name="blogmx-registry" />
+        <module name="blogmx-upload" />
+        <module name="blogmx-image" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,6 +21,7 @@
       <module name="blogmx-image" target="1.8" />
       <module name="blogmx-registry" target="1.8" />
       <module name="blogmx-upload" target="1.8" />
+      <module name="mxblog-common" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -29,6 +31,7 @@
       <module name="blogmx-image" options="-parameters" />
       <module name="blogmx-registry" options="-parameters" />
       <module name="blogmx-upload" options="-parameters" />
+      <module name="mxblog-common" options="-parameters" />
     </option>
   </component>
 </project>

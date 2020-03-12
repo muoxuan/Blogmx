@@ -14,6 +14,7 @@
         <module>blogmx-gateway</module>
         <module>blogmx-upload</module>
         <module>blogmx-image</module>
+        <module>mxblog-common</module>
     </modules>
 
     <parent>

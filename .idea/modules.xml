@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/blogmx-image/blogmx-image.iml" filepath="$PROJECT_DIR$/blogmx-image/blogmx-image.iml" />
       <module fileurl="file://$PROJECT_DIR$/blogmx-registry/blogmx-registry.iml" filepath="$PROJECT_DIR$/blogmx-registry/blogmx-registry.iml" />
       <module fileurl="file://$PROJECT_DIR$/blogmx-upload/blogmx-upload.iml" filepath="$PROJECT_DIR$/blogmx-upload/blogmx-upload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mxblog-common/mxblog-common.iml" filepath="$PROJECT_DIR$/mxblog-common/mxblog-common.iml" />
     </modules>
   </component>
 </project>

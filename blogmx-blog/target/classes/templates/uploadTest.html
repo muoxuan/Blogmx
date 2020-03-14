@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="http://api.blogmx.cn/api/saveBlog" enctype="multipart/form-data" method="post">
+    titleName:
+    <input type="text" name="titleName"><br>
+    subTitle:
+    <input type="text" name="subTitle"><br>
+    isTop:
+    <select name="isTop">
+        <option value="0" selected="selected">否</option>
+        <option value="1">是</option>
+    </select><br>
+    isHot:
+    <select name="isHot">
+        <option value="0" selected="selected">否</option>
+        <option value="1">是</option>
+    </select><br>
+    index:
+    <input type="text" name="index"><br>
+    watchNum
+    <input type="text" name="watchNum"><br>
+    image
+    <input type="text" name="image"><br>
+    <input type="file" name="file"><br>
+    <input type="submit">
+</form>
+
+</body>
+</html>

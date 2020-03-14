@@ -17,14 +17,29 @@ public class UploadController {
 
     @Autowired
     private UploadService uploadService;
-    @PostMapping("upload")
-    public ResponseEntity<String> uploadImage(@RequestParam("file") MultipartFile file){
-        System.out.println("666");
-        String url = this.uploadService.upload(file);
-        if (StringUtils.isBlank(url)) {
-            return ResponseEntity.badRequest().build();
+
+    @GetMapping("save")
+    public ResponseEntity<Void> save(){
+        System.out.println("get save");
+        return ResponseEntity.ok().build();
+    }
+    @PostMapping("saveBlog")
+    public ResponseEntity<Void> uploadImage(@RequestParam("file") MultipartFile file,
+                                              @RequestParam("titleName") String titleName,
+                                              @RequestParam("subTitle") String subTitle,
+                                              @RequestParam("isTop") Boolean isTop,
+                                              @RequestParam("isHot") Boolean isHot,
+                                              @RequestParam("index") String index,
+                                              @RequestParam("watchNum") Long watchNum,
+                                              @RequestParam("image") String image
+                                              ){
+        System.out.println("111");
+        int i = uploadService.saveBlog(file, titleName, subTitle, isTop, isHot, index, watchNum, image);
+        if(i == 0){
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
-        return ResponseEntity.status(HttpStatus.CREATED).body(url);
+        return ResponseEntity.ok().build();
+
     }
 
 }

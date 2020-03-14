@@ -1,0 +1,73 @@
+Index: blogmx-gateway/target/classes/application.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>server:\r\n  port: 10002\r\nspring:\r\n  application:\r\n    name: blogmx-gateway\r\neureka:\r\n  client:\r\n    registry-fetch-interval-seconds: 5\r\n    service-url:\r\n      defaultZone: http://127.0.0.1:10001/eureka\r\nzuul:\r\n  prefix: /api\r\n  routes:\r\n    blogmx-blog: /bl/** # 路由到商品的微服务\r\n  add-host-header: true\r\n  sensitive-headers: #覆盖默认敏感头信息
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- blogmx-gateway/target/classes/application.yml	(date 1583596157000)
++++ blogmx-gateway/target/classes/application.yml	(date 1584013916338)
+@@ -11,6 +11,9 @@
+ zuul:
+   prefix: /api
+   routes:
+-    blogmx-blog: /bl/** # 路由到商品的微服务
++    blogmx-blog: /bl/** # 路由到获取博客的微服务
+   add-host-header: true
+-  sensitive-headers: #覆盖默认敏感头信息
+\ No newline at end of file
++  sensitive-headers: #覆盖默认敏感头信息
++  ignored-services: blogmx-upload
++
++
+Index: blogmx-blog/src/main/resources/application.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>server:\r\n  port: 8001\r\nspring:\r\n  application:\r\n    name: blogmx-blog\r\neureka:\r\n  client:\r\n    service-url:\r\n      defaultZone: http://127.0.0.1:10001/eureka\r\n  instance:\r\n    lease-renewal-interval-in-seconds: 5 # 5秒钟发送一次心跳\r\n    lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- blogmx-blog/src/main/resources/application.yml	(date 1583596157000)
++++ blogmx-blog/src/main/resources/application.yml	(date 1584013259656)
+@@ -3,6 +3,8 @@
+ spring:
+   application:
+     name: blogmx-blog
++  thymeleaf:
++    cache: false
+ eureka:
+   client:
+     service-url:
+Index: blogmx-blog/target/classes/application.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>server:\r\n  port: 8001\r\nspring:\r\n  application:\r\n    name: blogmx-blog\r\neureka:\r\n  client:\r\n    service-url:\r\n      defaultZone: http://127.0.0.1:10001/eureka\r\n  instance:\r\n    lease-renewal-interval-in-seconds: 5 # 5秒钟发送一次心跳\r\n    lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- blogmx-blog/target/classes/application.yml	(date 1583596157000)
++++ blogmx-blog/target/classes/application.yml	(date 1584013888248)
+@@ -3,6 +3,8 @@
+ spring:
+   application:
+     name: blogmx-blog
++  thymeleaf:
++    cache: false
+ eureka:
+   client:
+     service-url:
+Index: blogmx-upload/src/main/resources/application.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>server:\r\n  port: 8002\r\nspring:\r\n  application:\r\n    name: blogmx-upload\r\n  servlet:\r\n    multipart:\r\n      max-file-size: 5MB # 限制文件上传的大小\r\neureka:\r\n  client:\r\n    service-url:\r\n      defaultZone: http://127.0.0.1:10001/eureka\r\n  instance:\r\n    lease-renewal-interval-in-seconds: 5\r\n    lease-expiration-duration-in-seconds: 10\r\n\r\nfdfs:\r\n  so-timeout: 1501 # 超时时间\r\n  connect-timeout: 601 # 连接超时时间\r\n  thumb-image: # 缩略图\r\n    width: 60\r\n    height: 60\r\n  tracker-list: # tracker地址：你的服务器地址+端口（默认是22122）\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- blogmx-upload/src/main/resources/application.yml	(date 1583596157000)
++++ blogmx-upload/src/main/resources/application.yml	(date 1583596170011)
+@@ -21,3 +21,4 @@
+     width: 60
+     height: 60
+   tracker-list: # tracker地址：你的服务器地址+端口（默认是22122）
++    - 47.99.81.136:22122
+\ No newline at end of file

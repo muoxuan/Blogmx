@@ -17,12 +17,7 @@ public class BlogController {
     @Autowired
     private BlogService blogService;
 
-    @GetMapping("")
-    public ResponseEntity<String> getBlogs(@RequestParam("blogId") Long id){
-        System.out.println("11111111111111111111111111111111111111111111111111");
-        String blogById = blogService.getBlogById(id);
-        return ResponseEntity.ok(blogById);
-    }
+
 
     @GetMapping("{id}.html")
     public String toBlogPage(Model model, @PathVariable("id") Long id){
@@ -34,9 +29,12 @@ public class BlogController {
     }
     @GetMapping("getBlog")
     public ResponseEntity<Void> getBlog(@RequestParam("blogId") Long id){
-        blogService.download();
+
+        //blogService.download();
         return ResponseEntity.ok().build();
     }
+
+
 
 
 

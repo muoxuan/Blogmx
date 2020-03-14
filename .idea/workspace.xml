@@ -1,0 +1,1102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="591d0b67-e2e2-4e74-b19d-10c0c6857a76" name="Default Changelist" comment="增加文件上传微服务（已完成）">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_amqp_client_5_4_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_unknown.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_2_0_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_2_0_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_amqp_2_0_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_0_11_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Default_Changelist.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Default_Changelist/BlogApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Default_Changelist/BlogController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Default_Changelist/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogmx-blog/src/main/resources/templates/uploadTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogmx-blog/target/classes/templates/read.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogmx-blog/target/classes/templates/uploadTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/upload/mapper/BlogMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogmx-upload/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogmx-upload/target/classes/com/blogmx/BlogmxUploadApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogmx-upload/target/classes/com/blogmx/upload/config/FastClientImporter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogmx-upload/target/classes/com/blogmx/upload/controller/UploadController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogmx-upload/target/classes/com/blogmx/upload/service/UploadService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogmx-upload/target/test-classes/META-INF/blogmx-upload.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mxblog-common/src/main/java/com/blogmx/pojo/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogmx-blog/blogmx-blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/blogmx-blog/blogmx-blog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogmx-blog/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blogmx-blog/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogmx-blog/src/main/java/com/blogmx/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blogmx-blog/src/main/java/com/blogmx/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogmx-blog/src/main/java/com/blogmx/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blogmx-blog/src/main/java/com/blogmx/service/BlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogmx-blog/target/classes/com/blogmx/controller/BlogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/blogmx-blog/target/classes/com/blogmx/controller/BlogController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogmx-blog/target/classes/com/blogmx/service/BlogService.class" beforeDir="false" afterPath="$PROJECT_DIR$/blogmx-blog/target/classes/com/blogmx/service/BlogService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogmx-upload/blogmx-upload.iml" beforeDir="false" afterPath="$PROJECT_DIR$/blogmx-upload/blogmx-upload.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogmx-upload/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blogmx-upload/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/upload/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/upload/controller/UploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/upload/service/UploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/upload/service/UploadService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogmx-upload/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blogmx-upload/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mxblog-common/mxblog-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mxblog-common/mxblog-common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mxblog-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mxblog-common/pom.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/classes/" />
+    <ignored path="$PROJECT_DIR$/blogmx-registry/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/blogmx-blog/target/" />
+    <ignored path="$PROJECT_DIR$/blogmx-gateway/target/" />
+    <ignored path="$PROJECT_DIR$/blogmx-upload/target/" />
+    <ignored path="$PROJECT_DIR$/blogmx-image/target/" />
+    <ignored path="$PROJECT_DIR$/mxblog-common/target/" />
+    <ignored path="E:\mxblog\blogmx\.idea\shelf/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/upload/controller/UploadController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="624">
+              <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blogmx-blog/src/main/java/com/blogmx/controller/BlogController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="672">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/upload/service/UploadService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1248">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mxblog-common/src/main/java/com/blogmx/pojo/Blog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blogmx-upload/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1224">
+              <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/upload/mapper/BlogMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.m2/repository/tk/mybatis/mapper-base/1.0.1/mapper-base-1.0.1.jar!/tk/mybatis/mapper/common/Mapper.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/blogmx-blog/src/main/resources/templates/uploadTest.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.m2/repository/tk/mybatis/mapper-core/1.0.2/mapper-core-1.0.2.jar!/tk/mybatis/mapper/annotation/RegisterMapper.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/upload/config/FastClientImporter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/blogmx-registry/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/blogmx-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/blogmx-gateway/src/main/java/com/blogmx/gateway/config/FilterConfig.java" />
+        <option value="$PROJECT_DIR$/blogmx-gateway/src/main/java/com/blogmx/BlogmxGatewayApplication.java" />
+        <option value="$PROJECT_DIR$/blogmx-gateway/src/main/java/com/blogmx/gateway/config/BlogmxCorsConfiguration.java" />
+        <option value="$PROJECT_DIR$/blogmx-blog/src/main/java/com/blogmx/BlogApplication.java" />
+        <option value="$PROJECT_DIR$/blogmx-upload/src/main/java/com/upload/BlogmxUploadApplication.java" />
+        <option value="$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/BlogmxUploadApplication.java" />
+        <option value="$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/upload/comtroller.java" />
+        <option value="$PROJECT_DIR$/blogmx-gateway/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/upload/config/FastClientImporter.java" />
+        <option value="$PROJECT_DIR$/blogmx-gateway/src/test/java/com/blogmx/upload/test/FastDFSTest.java" />
+        <option value="$PROJECT_DIR$/blogmx-upload/src/test/java/com/blogmx/upload/test/FastDFSTest.java" />
+        <option value="$PROJECT_DIR$/blogmx-image/pom.xml" />
+        <option value="$PROJECT_DIR$/blogmx-blog/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/blogmx-blog/src/main/java/com/blogmx/service/BlogService.java" />
+        <option value="$PROJECT_DIR$/mxblog-common/pom.xml" />
+        <option value="$PROJECT_DIR$/blogmx-blog/pom.xml" />
+        <option value="$PROJECT_DIR$/blogmx-blog/src/main/java/com/blogmx/controller/BlogController.java" />
+        <option value="$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/upload/mapper/UploadMapper.java" />
+        <option value="$PROJECT_DIR$/blogmx-upload/pom.xml" />
+        <option value="$PROJECT_DIR$/blogmx-upload/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/upload/mapper/BlogMapper.java" />
+        <option value="$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/upload/controller/UploadController.java" />
+        <option value="$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/upload/service/UploadService.java" />
+        <option value="$PROJECT_DIR$/mxblog-common/src/main/java/com/blogmx/pojo/Blog.java" />
+        <option value="$PROJECT_DIR$/blogmx-blog/src/main/resources/templates/uploadTest.html" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="width" value="1045" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-gateway" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-upload" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-upload" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-upload" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-upload" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-upload" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-upload" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-upload" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-upload" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-upload" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-upload" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-upload" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="mxblog-common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="mxblog-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="mxblog-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="mxblog-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx" type="462c0819:PsiDirectoryNode" />
+              <item name="mxblog-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="E:/JavaProject/mail" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\mxblog\blogmx\blogmx-blog\src\main\resources\templates" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.blogmx.upload.service" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.FastDFSTest.testUpload">
+    <configuration name="BlogService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.blogmx.service.BlogService" />
+      <module name="blogmx-blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.blogmx.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FastDFSTest.testUpload" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blogmx-upload" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.blogmx.upload.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.blogmx.upload.test" />
+      <option name="MAIN_CLASS_NAME" value="com.blogmx.upload.test.FastDFSTest" />
+      <option name="METHOD_NAME" value="testUpload" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="blogmx-blog" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blogmx.BlogApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlogmxGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="blogmx-gateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.blogmx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blogmx.BlogmxGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlogmxRegistryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="blogmx-registry" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blogmx.BlogmxRegistryApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlogmxUploadApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="blogmx-upload" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blogmx.BlogmxUploadApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.BlogmxGatewayApplication" />
+        <item itemvalue="JUnit.FastDFSTest.testUpload" />
+        <item itemvalue="Application.BlogService" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="591d0b67-e2e2-4e74-b19d-10c0c6857a76" name="Default Changelist" comment="" />
+      <created>1583333638419</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583333638419</updated>
+      <workItem from="1583333640803" duration="558000" />
+      <workItem from="1583334955099" duration="1122000" />
+      <workItem from="1583383009948" duration="5000" />
+      <workItem from="1583408671463" duration="10445000" />
+      <workItem from="1583463208964" duration="6292000" />
+      <workItem from="1583582186473" duration="9904000" />
+      <workItem from="1584012856541" duration="9713000" />
+      <workItem from="1584109616792" duration="7918000" />
+      <workItem from="1584164938112" duration="1366000" />
+    </task>
+    <task id="LOCAL-00001" summary="eureka注册中心配置文件端口号被修改">
+      <created>1583335741717</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583335741717</updated>
+    </task>
+    <task id="LOCAL-00002" summary="配置gateway、获取博客等">
+      <created>1583470059329</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583470059329</updated>
+    </task>
+    <task id="LOCAL-00003" summary="配置gateway、获取博客等">
+      <created>1583470160706</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583470160706</updated>
+    </task>
+    <task id="LOCAL-00004" summary="增加文件上传微服务（待完成）">
+      <created>1583596157524</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1583596157524</updated>
+    </task>
+    <task id="LOCAL-00005" summary="增加文件上传微服务（已完成）">
+      <created>1584022940440</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1584022940440</updated>
+    </task>
+    <task id="LOCAL-00006" summary="增加文件上传微服务（已完成）">
+      <created>1584023019445</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584023019445</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="FastDFSTest_testUpload - 2020.03.07 at 20h 54m 19s.xml">
+      <configuration name="FastDFSTest.testUpload" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="47323000" />
+  </component>
+  <component name="TodoView" selected-index="2">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2657082" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49627262" weight="0.32937366" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.83067095" weight="0.33045357" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49520767" weight="0.32937366" />
+      <window_info anchor="bottom" id="Spring" order="7" sideWeight="0.49574015" weight="0.32937366" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49627262" weight="0.32937366" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.17625134" side_tool="true" visible="true" weight="0.2537797" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" sideWeight="0.4946752" weight="0.32937366" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.54206604" weight="0.32937366" />
+      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49627262" weight="0.32937366" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.82374865" visible="true" weight="0.2537797" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.32960597" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="eureka注册中心配置文件端口号被修改" />
+    <MESSAGE value="配置gateway、获取博客等" />
+    <MESSAGE value="增加文件上传微服务（待完成）" />
+    <MESSAGE value="增加文件上传微服务（已完成）" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加文件上传微服务（已完成）" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/blogmx-registry/src/main/java/com/blogmx/BlogmxRegistryApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="e#345#346#0" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogmx-registry/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/upload/comtroller.java" />
+    <entry file="file://$PROJECT_DIR$/blogmx-upload/blogmx-upload.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/upload/service/test.java" />
+    <entry file="file://$PROJECT_DIR$/blogmx-upload/src/test/java/com/blogmx/upload/test/FastDFSTest.java" />
+    <entry file="file://$PROJECT_DIR$/blogmx-gateway/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogmx-image/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="888">
+          <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogmx-gateway/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/com/github/tobato/fastdfs-client/1.26.1-RELEASE/fastdfs-client-1.26.1-RELEASE.jar!/com/github/tobato/fastdfs/proto/storage/DownloadCallback.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/com/github/tobato/fastdfs-client/1.26.1-RELEASE/fastdfs-client-1.26.1-RELEASE.jar!/com/github/tobato/fastdfs/domain/FileInfo.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-815">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogmx-blog/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogmx-gateway/src/main/java/com/blogmx/gateway/config/BlogmxCorsConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogmx-blog/src/main/resources/templates/read.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/com/github/tobato/fastdfs-client/1.26.1-RELEASE/fastdfs-client-1.26.1-RELEASE.jar!/com/github/tobato/fastdfs/service/GenerateStorageClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/com/github/tobato/fastdfs-client/1.26.1-RELEASE/fastdfs-client-1.26.1-RELEASE.jar!/com/github/tobato/fastdfs/domain/MateData.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mxblog-common/src/main/java/com/blogmx/pojo.java" />
+    <entry file="file://$PROJECT_DIR$/mxblog-common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogmx-blog/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogmx-blog/src/main/java/com/blogmx/service/BlogService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-77">
+          <caret line="22" column="103" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="103" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.0.11.RELEASE/spring-web-5.0.11.RELEASE.jar!/org/springframework/http/HttpStatus.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1368">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogmx-gateway/src/main/java/com/blogmx/BlogmxGatewayApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogmx-blog/src/main/java/com/blogmx/BlogApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/upload/mapper/UploadMapper.java" />
+    <entry file="file://$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/BlogmxUploadApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#343#344#0" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogmx-upload/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/upload/controller/UploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogmx-blog/src/main/java/com/blogmx/controller/BlogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/upload/service/UploadService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1248">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mxblog-common/src/main/java/com/blogmx/pojo/Blog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogmx-upload/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/upload/mapper/BlogMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/tk/mybatis/mapper-base/1.0.1/mapper-base-1.0.1.jar!/tk/mybatis/mapper/common/Mapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/tk/mybatis/mapper-core/1.0.2/mapper-core-1.0.2.jar!/tk/mybatis/mapper/annotation/RegisterMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogmx-upload/src/main/java/com/blogmx/upload/config/FastClientImporter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogmx-blog/src/main/resources/templates/uploadTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>blogmx-upload</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

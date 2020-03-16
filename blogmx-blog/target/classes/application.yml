@@ -3,6 +3,20 @@ server:
 spring:
   application:
     name: blogmx-blog
+  thymeleaf:
+    cache: false
+  datasource: # 配置数据源
+    url: jdbc:mysql://47.99.81.136:3306/blogmx?characterEncoding=utf-8
+    username: root
+    password: sjg2607794330
+    max-idle: 10
+    ax-wait: 10000
+    min-idle: 5
+    initial-size: 5
+    validation-query: SELECT 1
+    test-on-borrow: false
+    test-while-idle: true
+    time-between-eviction-runs-millis: 18800
 eureka:
   client:
     service-url:
@@ -10,4 +24,9 @@ eureka:
   instance:
     lease-renewal-interval-in-seconds: 5 # 5秒钟发送一次心跳
     lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期
+mybatis:
+  type-aliases-package: com.blogmx.pojo # 配置实体类
+  configuration:
+    default-statement-timeout: 30000
+
 

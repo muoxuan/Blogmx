@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.Map;
+
 @Controller
 @RequestMapping("blog")
 public class BlogController {
@@ -21,10 +23,12 @@ public class BlogController {
 
     @GetMapping("{id}.html")
     public String toBlogPage(Model model, @PathVariable("id") Long id){
-        System.out.println("2222222");
         if(id == 0){
             return "uploadTest";
         }
+        Map<String, Object> map = blogService.loadBlog(id);
+        model.addAllAttributes(map);
+
         return "read";
     }
     @GetMapping("getBlog")

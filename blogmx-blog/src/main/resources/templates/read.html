@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -20,7 +20,7 @@
     <header class="gird-header">
         <div class="header-fixed">
             <div class="header-inner">
-                <a href="javascript:void(0)" class="header-logo" id="logo">Mr.Yss</a>
+                <a href="javascript:void(0)" class="header-logo" id="logo">Mo Xuan</a>
                 <nav class="nav" id="nav">
                     <ul>
                         <li><a href="index.html">首页</a></li>
@@ -48,46 +48,23 @@
                         <input type="hidden" value="@Model.BlogTypeID" id="blogtypeid" />
                         <section class="article-item">
                             <aside class="title" style="line-height:1.5;">
-                                <h4>使用码云和VS托管本地代码</h4>
-                                <p class="fc-grey fs-14">
-                                    <small>
-                                        作者：<a href="javascript:void(0)" target="_blank" class="fc-link">燕十三</a>
-                                    </small>
-                                    <small class="ml10">围观群众：<i class="readcount">37</i></small>
-                                    <small class="ml10">更新于 <label>2018-06-22:17:30:24</label> </small>
-                                </p>
+                                <h2  th:text="${TitleName}">使用码云和VS托管本地代码</h2>
                             </aside>
                             <div class="time mt10" style="padding-bottom:0;">
-                                <span class="day">22</span>
-                                <span class="month fs-18">5<small class="fs-14">月</small></span>
-                                <span class="year fs-18">2019</span>
+                                <span class="day" th:text="${day}">22</span>
+                                <span class="month fs-18" th:text="${month}">5<small class="fs-14">月</small></span>
+                                <span class="year fs-18"th:text="${year}">2019</span>
                             </div>
-                            <div class="content artiledetail" id = "markdown" style="border-bottom: 1px solid #e1e2e0; padding-bottom: 20px;">
-                                内容自定义
-                                <div class="copyright mt20">
-                                    <p class="f-toe fc-black">
-                                        非特殊说明，本文版权归 燕十三 所有，转载请注明出处.
-                                    </p>
-                                    <p class="f-toe">
-                                        本文标题：
-                                        <a href="javascript:void(0)" class="r-title">使用码云和VS托管本地代码</a>
-                                    </p>
-                                    <p class="f-toe">
-                                        本文网址：
-                                        <a href="#">https://www.yanshisan.cn/Blog/Read/7</a>
-                                    </p>
-                                </div>
-                                <div id="aplayer" style="margin:5px 0"></div>
-                                <h6>延伸阅读</h6>
-                                <ol class="b-relation"></ol>
+                            <div class="content artiledetail" th:utext="${blog}" id="markdown" style="border-bottom: 1px solid #e1e2e0; padding-bottom: 20px;">
+                            123
                             </div>
                             <div class="bdsharebuttonbox share" data-tag="share_1">
                                 <ul>
-                                    <li class="f-praise"><span><a class="s-praise"></a></span></li>
-                                    <li class="f-weinxi"><a class="s-weinxi" data-cmd="weixin"></a></li>
-                                    <li class="f-sina"><a class="s-sina" data-cmd="tsina"></a></li>
+                                    <li class="f-praise" href="#"><i class="fa fa-praise"></i></li>
+                                    <li class="f-weinxi" href="#"><i class="fa fa-weinxi"></i></li>
+                                    <li class="f-sina" href="#"><i class="fa fa-sina"></i></li>
                                     <li class="f-qq" href="#"><i class="fa fa-qq"></i></li>
-                                    <li class="f-qzone"><a class="s-qzone" data-cmd="qzone"></a></li>
+                                    <li class="f-qzone" href="#"><i class="fa fa-qzone"></i></li>
                                 </ul>
                             </div>
                             <div class="f-cb"></div>
@@ -126,9 +103,9 @@
                         <a href="#" class="email" target="_blank" ><i class="fa fa-envelope"></i></a>
                         <a href="javascript:void(0)" class="weixin"><i class="fa fa-weixin"></i></a>
                     </div>
-                    <p class="mt05">
-                        Copyright &copy; 2018-2018 燕十三 All Rights Reserved V.3.1.3 蜀ICP备18008600号
-                    </p>
+                    <a class="mt05" href="http://www.beian.miit.gov.cn/">
+                        这里应该是备案号，还得指向
+                    </a>
                 </div>
             </div>
         </div>
@@ -141,22 +118,7 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/markdown.js"></script>
-    <script>
-        var xmlhttp = new XMLHttpRequest();//获取对象
-        xmlhttp.onreadystatechange=function()
-        {
-            if (xmlhttp.readyState==4 && xmlhttp.status==200)
-            {
-                str = xmlhttp.responseText;
-                var name = document.getElementById("markdown");
-                name.innerHTML = marked(str);
-                changeMarkdownCss($("#markdown"));
-            }
-        }
-        $s = "http://api.blogmx.cn/api/bl/blogs?blogId=1";
-        xmlhttp.open("get",$s,true);
-        xmlhttp.send("");
-    </script>
+
     <script> 
         window.onload = function () {
             NProgress.done();
@@ -167,4 +129,5 @@
 
     </script>
 </body>
+
 </html>

@@ -2,6 +2,7 @@ package com.blogmx.service;
 
 import com.blogmx.mapper.BlogMapper;
 import com.blogmx.pojo.Blog;
+import com.blogmx.pojo.MoreBlog;
 import com.vladsch.flexmark.Extension;
 import com.vladsch.flexmark.ast.Node;
 import com.vladsch.flexmark.ext.tables.TablesExtension;
@@ -16,10 +17,7 @@ import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class BlogService {
@@ -74,6 +72,9 @@ public class BlogService {
 
     public Map<String, Object> loadBlog(Long id){
         Blog blog = blogMapper.selectByPrimaryKey(id);
+        if(blog == null){
+            return null;
+        }
         Map<String, Object> map = new HashMap<>();
         map.put("watchNum", blog.getWatchNum());
         Date createTime = blog.getCreateTime();
@@ -85,8 +86,9 @@ public class BlogService {
         map.put("TitleName", blog.getTitleName());
         map.put("blog", mdToHtml(download(blog.getFile())));
         return map;
-
     }
+
+
 
 
 }

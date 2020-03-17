@@ -18,11 +18,6 @@ public class UploadController {
     @Autowired
     private UploadService uploadService;
 
-    @GetMapping("save")
-    public ResponseEntity<Void> save(){
-        System.out.println("get save");
-        return ResponseEntity.ok().build();
-    }
     @PostMapping("saveBlog")
     public ResponseEntity<Void> uploadImage(@RequestParam("file") MultipartFile file,
                                               @RequestParam("titleName") String titleName,

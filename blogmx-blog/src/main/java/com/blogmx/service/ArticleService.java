@@ -26,7 +26,7 @@ public class ArticleService {
     private BlogService blogService;
 
 
-    public Map<String, Object> getArticle(int page){
+    public List<MoreBlog> getArticle(int page){
 
         List<Blog> blogs = blogMapper.selectAll();
         List<MoreBlog> list1 = new LinkedList<>();
@@ -38,7 +38,7 @@ public class ArticleService {
             moreBlog.setMonth(new SimpleDateFormat("MM").format(blog.getCreateTime()) + "月");
             moreBlog.setYear(new SimpleDateFormat("yyyy").format(blog.getCreateTime()));
             moreBlog.setUrl("http://www.blogmx.cn/blog/" + blog.getId() + ".html");
-            moreBlog.setSubtitle(blogService.mdToHtml(blogService.download(blog.getFile())));
+            //moreBlog.setSubtitle(blogService.mdToHtml(blogService.download(blog.getFile())));
             if(blog.getIsTop()){
                 list1.add(moreBlog);
             }
@@ -47,8 +47,12 @@ public class ArticleService {
             }
         }
         list1.addAll(list2);
-        Map<String, Object> map = new HashMap<>();
-        map.put("blogs", list1.subList(page - 1, page + 3));
-        return map;
+
+        page = (page - 1) * 5;
+
+        if(page >= list1.size()){
+            return null;
+        }
+        return list1.subList(page, Math.min(list1.size(), page + 5));
     }
 }

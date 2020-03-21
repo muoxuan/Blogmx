@@ -33,7 +33,7 @@ public class BlogController {
             return "badblog";
         }
         model.addAllAttributes(map);
-
+        blogService.createHtml(id);
         return "read";
     }
 

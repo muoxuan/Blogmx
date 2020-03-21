@@ -227,8 +227,19 @@
 	});
 </script>
 	<script>
-		function search(){
-			window.location.href="http://www.blogmx.cn/article/search?key=" + $("#searchtxt").val();
+		function search() {
+			var filename = $("#searchtxt").val();
+
+			var curFilename = null;
+			if (filename.indexOf('#') != -1 || filename.indexOf('+') != -1 || filename.indexOf('/') != -1 || filename.indexOf('?') != -1 || filename.indexOf('%') != -1 || filename.indexOf('&') != -1 || filename.indexOf('=') != -1) {
+				curFilename = filename.replace(/([\#|\+|\/|\?|\%|\#|\&|\=])/g, function ($1) {
+					return encodeURIComponent($1)
+				})
+			} else {
+
+				curFilename = filename;
+				window.location.href = "http://www.blogmx.cn/article/search?key=" + curFilename;
+			}
 		}
 	</script>
 </body>

@@ -14,6 +14,8 @@ import com.vladsch.flexmark.parser.ParserEmulationProfile;
 import com.vladsch.flexmark.util.options.MutableDataSet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.thymeleaf.TemplateEngine;
+import org.thymeleaf.context.Context;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -28,6 +30,9 @@ public class BlogService {
 
     @Autowired
     private LableMapper lableMapper;
+
+    @Autowired
+    private TemplateEngine templateEngine;
 
     /**
      *
@@ -141,6 +146,26 @@ public class BlogService {
         return list;
     }
 
+    public void createHtml(Long id){
+        //初始化运行上下文
+        Context context = new Context();
+        //设置数据模型
+        context.setVariables(loadBlog(id));
+        PrintWriter printWriter = null;
+        try {
+            //静态文件生成到nginx本地
+            File file = new File("G:\\nginx\\nginx-1.14.0\\nginx-1.14.0\\html\\" + id + ".html");
+            printWriter = new PrintWriter(file);
+
+            templateEngine.process("read", context, printWriter);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            if(printWriter != null){
+                printWriter.close();
+            }
+        }
+    }
 
 
 

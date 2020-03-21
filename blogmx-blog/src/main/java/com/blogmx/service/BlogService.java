@@ -1,7 +1,9 @@
 package com.blogmx.service;
 
 import com.blogmx.mapper.BlogMapper;
+import com.blogmx.mapper.LableMapper;
 import com.blogmx.pojo.Blog;
+import com.blogmx.pojo.Lable;
 import com.blogmx.pojo.MoreBlog;
 import com.vladsch.flexmark.Extension;
 import com.vladsch.flexmark.ast.Node;
@@ -23,6 +25,9 @@ import java.util.*;
 public class BlogService {
     @Autowired
     private BlogMapper blogMapper;
+
+    @Autowired
+    private LableMapper lableMapper;
 
     /**
      *
@@ -63,7 +68,6 @@ public class BlogService {
         options.set(Parser.EXTENSIONS, Arrays.asList(new Extension[] { TablesExtension.create()}));
         Parser parser = Parser.builder(options).build();
         HtmlRenderer renderer = HtmlRenderer.builder(options).build();
-
         Node document = parser.parse(markdown);
         String html = renderer.render(document);
         return html;
@@ -71,6 +75,7 @@ public class BlogService {
 
 
     public Map<String, Object> loadBlog(Long id){
+        List<Lable> lables = lableMapper.selectAll();
         Blog blog = blogMapper.selectByPrimaryKey(id);
         if(blog == null){
             return null;
@@ -85,7 +90,55 @@ public class BlogService {
         map.put("CreateTime", sdf.format(createTime));
         map.put("TitleName", blog.getTitleName());
         map.put("blog", mdToHtml(download(blog.getFile())));
+        String[] strs = blog.getIndex().split(",");
+        List<String> indexs = new LinkedList<>();
+        for(int i = 0; i < strs.length; i++){
+            String name = isBelongLables(Long.parseLong(strs[i]), lables);
+            if(!name.equals("")){
+                indexs.add(name);
+            }
+        }
+        map.put("lables", indexs);
         return map;
+    }
+
+    public String isBelongLables(Long id, List<Lable> lables){
+        for(Lable lable : lables){
+            if(id == lable.getId()){
+                return lable.getName();
+            }
+        }
+        return "";
+    }
+
+    public List<MoreBlog> getHot(){
+        Blog blog = new Blog();
+        blog.setIsHot(true);
+        List<Blog> select = blogMapper.select(blog);
+        List<MoreBlog> list = new ArrayList<>();
+        for(Blog b : select){
+            Date createTime = b.getCreateTime();
+            MoreBlog temp = new MoreBlog();
+            temp.setB(b);
+            temp.setYear(new SimpleDateFormat("yyyy年MM月dd日").format(createTime));
+            temp.setUrl("http://www.blogmx.cn/blog/" + b.getId() + ".html");
+            list.add(temp);
+        }
+        return list;
+    }
+
+    public List<MoreBlog> getTop(){
+        Blog blog = new Blog();
+        blog.setIsTop(true);
+        List<Blog> select = blogMapper.select(blog);
+        List<MoreBlog> list = new ArrayList<>();
+        for(Blog b : select){
+            MoreBlog temp = new MoreBlog();
+            temp.setB(b);
+            temp.setUrl("http://www.blogmx.cn/blog/" + b.getId() + ".html");
+            list.add(temp);
+        }
+        return list;
     }
 
 

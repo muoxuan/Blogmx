@@ -1,5 +1,7 @@
 package com.blogmx.pojo;
 
+import java.util.List;
+
 public class MoreBlog {
 
     private Blog b;
@@ -8,6 +10,7 @@ public class MoreBlog {
     private String year;
     private String url;
     private String subtitle;
+    private List<String> lables;
 
     public String getSubtitle() {
         return subtitle;

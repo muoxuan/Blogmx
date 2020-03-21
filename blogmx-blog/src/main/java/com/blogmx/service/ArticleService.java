@@ -25,8 +25,12 @@ public class ArticleService {
     @Autowired
     private BlogService blogService;
 
-
     public List<MoreBlog> getArticle(int page){
+
+        return getArticle(page, 5);
+    }
+
+    public List<MoreBlog> getArticle(int page, int rows){
 
         List<Blog> blogs = blogMapper.selectAll();
         List<MoreBlog> list1 = new LinkedList<>();
@@ -47,12 +51,17 @@ public class ArticleService {
             }
         }
         list1.addAll(list2);
+        if(rows == -1){
+            return list1;
+        }
 
-        page = (page - 1) * 5;
+        page = (page - 1) * rows;
 
         if(page >= list1.size()){
             return null;
         }
-        return list1.subList(page, Math.min(list1.size(), page + 5));
+        return list1.subList(page, Math.min(list1.size(), page + rows));
     }
+
+
 }

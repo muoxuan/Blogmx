@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="css/nprogress.css" />
     <link rel="stylesheet" href="css/blog.css" />
     <link rel="stylesheet" href="css/markdown_style.css" />
+    <link rel="icon" href="http://47.99.81.136//group1/M00/00/00/rBAohl5zMP6AMCgiAAAQvofQ1eg060.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://47.99.81.136//group1/M00/00/00/rBAohl5zMP6AMCgiAAAQvofQ1eg060.ico" type="image/x-icon">
+
 </head>
 <body>
     <div class="header">
@@ -49,6 +52,16 @@
                         <section class="article-item">
                             <aside class="title" style="line-height:1.5;">
                                 <h2  th:text="${TitleName}">使用码云和VS托管本地代码</h2>
+                                <aside class="f-oh footer"style="margin-top: 15px;">
+                                    <div class="f-fl tags">
+                                        <div class="f-fl tags">
+                                            <div th:each="lable :${lables}">
+                                                <a class="tag" th:text="${lable}">ASP.NET MVC</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </aside>
                             </aside>
                             <div class="time mt10" style="padding-bottom:0;">
                                 <span class="day" th:text="${day}">22</span>
@@ -103,9 +116,7 @@
                         <a href="#" class="email" target="_blank" ><i class="fa fa-envelope"></i></a>
                         <a href="javascript:void(0)" class="weixin"><i class="fa fa-weixin"></i></a>
                     </div>
-                    <a class="mt05" href="http://www.beian.miit.gov.cn/">
-                        这里应该是备案号，还得指向
-                    </a>
+                    <a href="http://www.beian.miit.gov.cn" style="color: white">黑ICP备20000999号-1</a>
                 </div>
             </div>
         </div>

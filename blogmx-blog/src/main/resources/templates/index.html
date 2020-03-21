@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hans-CN">
+<html lang="zh-Hans-CN" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -10,6 +10,8 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/index_style.css" rel="stylesheet" type="text/css">
     <link href="css/animate.min.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="http://47.99.81.136//group1/M00/00/00/rBAohl5zMP6AMCgiAAAQvofQ1eg060.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://47.99.81.136//group1/M00/00/00/rBAohl5zMP6AMCgiAAAQvofQ1eg060.ico" type="image/x-icon">
 </head>
 <body>
     <div id="menu" class="hover_animation menu_open" data-mark="false">
@@ -20,7 +22,7 @@
     <div id="navgation" class="navgation navgation_close">
         <ul class="point">
             <li><a href="#">首页</a></li>
-            <li><a href="#">博客</a></li>
+            <li><a href="/article">博客</a></li>
             <li><a href="#">留言</a></li>
         </ul>
         <div class="logo"><a>Mo Xuan</a></div>
@@ -31,7 +33,7 @@
                 <div class="nav wow zoomIn" data-wow-duration="2s">
                     <h1>默  轩</h1>
                     <p>若非群玉山头见，会向瑶台月下逢</p>
-                    <a class="layui-btn layui-btn-normal" style="margin-top: 20px" href="#">Enter Blog</a>
+                    <a class="layui-btn layui-btn-normal" style="margin-top: 20px" href="/article">Enter Blog</a>
                 </div>
                 <a class="next wow fadeInUp" data-wow-duration="2s" id="next"></a>
             </div>
@@ -43,7 +45,37 @@
                 <div class="warp-box">
                     <div class="new-article">
                         <div class="inner wow fadeInDown" data-wow-delay=".2s">
-                            <h1>其余功能开发中...</h1>
+                            <h1>热门文章</h1>
+                            <p>
+                                很想给你写封信,告诉你这里的天气.
+                                <br>昨夜的那场电影,还有我的心情.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="layui-row">
+                        <div class="layui-col-xs12 layui-col-sm4 layui-col-md4  wow fadeInUp" style="padding: 0 10px"  th:each="blog : ${hotBlogs}">
+                            <div class="single-news">
+                                <div class="news-head">
+                                    <img src="image/1.jpg">
+                                    <a th:href="${blog.url}" class="link"><i class="fa fa-link"></i></a>
+                                </div>
+                                <div class="news-content">
+                                    <h4>
+                                        <a th:href="${blog.url}" th:text="${blog.b.titleName}">
+                                            标题
+                                        </a>
+                                    </h4>
+                                    <div class="date" th:text="${blog.year}">
+                                        2017年2月16日
+                                    </div>
+                                    <p th:text="${blog.b.subTitle}">
+                                        很想给你写封信,告诉你这里的天气. 昨夜的那场电影,还有我的心情.
+                                    </p>
+                                    <a th:href="${blog.url}" class="btn">
+                                        阅读更多
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

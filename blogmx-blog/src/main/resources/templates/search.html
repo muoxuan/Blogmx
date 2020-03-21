@@ -27,8 +27,8 @@
                 <a href="javascript:void(0)" class="header-logo" id="logo">Mo Xuan</a>
                 <nav class="nav" id="nav">
                     <ul>
-                        <li><a href="http://www.blogmx.cn">首页</a></li>
-                        <li class="current"><a href="">博客</a></li>
+                        <li><a href="index.html">首页</a></li>
+                        <li class="current"><a href="article.html">博客</a></li>
                         <li><a href="message.html">留言</a></li>
                         <li><a href="link.html">友链</a></li>
                     </ul>
@@ -88,7 +88,7 @@
 					        <label class="search-wrap">
 					            <input type="text" id="searchtxt" placeholder="输入关键字搜索" />
 					            <span class="search-icon" onclick="search()">
-					                <i class="fa fa-search"></i>
+					                <i class="fa fa-search" ></i>
 					            </span>
 					        </label>
 			        		<ul class="search-result"></ul>
@@ -159,29 +159,30 @@
             NProgress.done();
         };
     </script>
-<script>
+<script th:inline="javascript">
 	$(document).ready(function(){
 		var blog = $("#LAY_bloglist");
 		var father = $("#father")
 		var url = 2;
-		$.get("article/1", function(data,status){
+		var key = [[${key}]];
+		$.get("search/" + key + "/1", function(data,status){
 
 
 				for (var i = 0; i < data.length; i++) {
 					var temp = blog.clone();
 					temp.removeAttr("hidden");
 					temp.attr("id", "temp");
-					if (!data[i].b.isTop) {
+					if (!data[i].isTop) {
 						temp.find(".fc-flag").attr("hidden", "hidden");
 					}
-					temp.find(".titleName").text(data[i].b.titleName);
+					temp.find(".titleName").text(data[i].titleName);
 					temp.find(".titleName").attr("href", data[i].url);
 					temp.find(".day").text(data[i].day);
 					temp.find(".month").text(data[i].month);
 					temp.find(".year").text(data[i].year);
-					temp.find(".content").text(data[i].b.subTitle);
+					temp.find(".content").text(data[i].subTitle);
 					temp.find(".fc-black").attr("href", data[i].url);
-					temp.find(".num").text(data[i].b.watchNum);
+					temp.find(".num").text(data[i].watchNum);
 					father.append(temp);
 				}
 
@@ -195,22 +196,22 @@
 					var windowHeight = $(this).height();
 					if (scrollTop + windowHeight == scrollHeight && flag) {
 						// 此处写滚动条到底部时候触发的事件
-						$.get("article/"+url, function(data,status){
+						$.get("search/" + key +"/"+ url, function(data,status){
 								for (var i = 0; i < data.length; i++) {
 									var temp = blog.clone();
 									temp.removeAttr("hidden");
 									temp.attr("id", "temp");
-									if (!data[i].b.isTop) {
+									if (!data[i].isTop) {
 										temp.find(".fc-flag").attr("hidden", "hidden");
 									}
-									temp.find(".titleName").text(data[i].b.titleName);
-									temp.find(".titleName").attr("href", data[0].url);
+									temp.find(".titleName").text(data[i].titleName);
+									temp.find(".titleName").attr("href", data[i].url);
 									temp.find(".day").text(data[i].day);
 									temp.find(".month").text(data[i].month);
 									temp.find(".year").text(data[i].year);
-									temp.find(".content").text(data[i].b.subTitle);
+									temp.find(".content").text(data[i].subTitle);
 									temp.find(".fc-black").attr("href", data[i].url);
-									temp.find(".num").text(data[i].b.watchNum);
+									temp.find(".num").text(data[i].watchNum);
 									father.append(temp);
 								}
 								url++;
@@ -226,10 +227,11 @@
 
 	});
 </script>
-	<script>
-		function search(){
-			window.location.href="http://www.blogmx.cn/article/search?key=" + $("#searchtxt").val();
-		}
-	</script>
+
+<script>
+	function search(){
+		window.location.href="http://www.blogmx.cn/article/search?key=" + $("#searchtxt").val();
+	}
+</script>
 </body>
 </html>

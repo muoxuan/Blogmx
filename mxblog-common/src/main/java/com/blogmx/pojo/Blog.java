@@ -1,10 +1,11 @@
 package com.blogmx.pojo;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Table(name = "article")
-public class Blog {
+public class Blog implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -2,7 +2,6 @@ package com.blogmx.service;
 
 import com.blogmx.pojo.SearchBlog;
 import com.blogmx.repository.BlogRepository;
-import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

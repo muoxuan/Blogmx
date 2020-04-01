@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<title>默轩-注册登录</title>
+<link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="http://47.99.81.136//group1/M00/00/00/rBAohl5zMP6AMCgiAAAQvofQ1eg060.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://47.99.81.136//group1/M00/00/00/rBAohl5zMP6AMCgiAAAQvofQ1eg060.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="content">
+        <div class="form sign-in">
+            <h2>欢迎回来</h2>
+            <label>
+                <span>用户名</span>
+                <input type="email" id = "logid"/>
+            </label>
+            <label>
+                <span>密码</span>
+                <input type="password" id="logpassword"/>
+            </label>
+            <p class="forgot-pass" style="color: red" hidden = "hidden" id = "wrong">用户名或密码错误</p>
+            <p class="forgot-pass"><a href="javascript:">忘记密码？</a></p>
+            <button type="button" class="submit" onclick="login()">登 录</button>
+            <button type="button" class="fb-btn">使用 <span>QQ</span> 帐号登录</button>
+        </div>
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img__text m--up">
+                    <h2>还未注册？</h2>
+                    <p>立即注册，发现大量机会！</p>
+                </div>
+                <div class="img__text m--in">
+                    <h2>已有帐号？</h2>
+                    <p>有帐号就登录吧，好久不见了！</p>
+                </div>
+                <div class="img__btn">
+                    <span class="m--up">注 册</span>
+                    <span class="m--in">登 录</span>
+                </div>
+            </div>
+            <div class="form sign-up">
+                <h2>立即注册</h2>
+                <label>
+                    <span>用户名</span>
+                    <input type="text" id="regid"/>
+                    <span style="color: red;" hidden = "hidden" id="check">用户名已被使用</span>
+                </label>
+                <label>
+                    <span>邮箱</span>
+                    <input type="email" id="regemail"/>
+                </label>
+                <label>
+                    <span>密码</span>
+                    <input type="password" id="regpassword"/>
+                </label>
+                <button type="button" class="submit" onclick="register()">注 册</button>
+                <button type="button" class="fb-btn">使用 <span>QQ</span> 帐号注册</button>
+            </div>
+        </div>
+
+    </div>
+    <footer><a href="http://www.beian.miit.gov.cn" style="text-decoration:none;color:#666;line-height:35px;border-radius:6px;position:absolute;
+
+      left:50%;
+
+      bottom:0;
+
+      text-align :center;">黑ICP备20000999号-1</a>
+    </footer>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        var flag = false;
+        function register(){
+            if(flag) {
+                $.post("/register",
+                    {
+                        name: $("#regid").val(),
+                        email: $("#regemail").val(),
+                        password: $("#regpassword").val()
+                    },
+                    function (data, status) {
+                        if (data) {
+                            window.location.replace("http://www.blogmx.cn/message");
+                        }
+
+                    });
+            }
+        }
+
+        function login(){
+            $.post("/log",
+                {
+                    name:$("#logid").val(),
+                    password:$("#logpassword").val()
+                },
+                function(data,status){
+                    if(data){
+                        window.location.replace("http://www.blogmx.cn/message");
+                    }
+                    else{
+                        $("#wrong").removeAttr("hidden");
+                    }
+                });
+        }
+        var name = $("#regid").val();
+
+        $("#regid").blur(function(){
+            var name = $("#regid").val();
+            $.get("check/"+name, function(data,status){
+                if(!data){
+                    $("#check").removeAttr("hidden");
+                }
+                else{
+                    $("#check").attr("hidden", "hidden");
+                }
+
+            });
+        });
+
+
+
+    </script>
+
+    <script src="js/script.js"></script>
+	
+	<div style="text-align:center;">
+</div>
+</body>
+
+</html>

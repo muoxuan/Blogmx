@@ -3,6 +3,8 @@ package com.blogmx.upload.service;
 import com.blogmx.pojo.Blog;
 import com.blogmx.pojo.SearchBlog;
 import com.blogmx.repository.BlogRepository;
+import com.blogmx.service.ArticleService;
+import com.blogmx.service.BlogService;
 import com.blogmx.upload.mapper.UpBlogMapper;
 import com.github.tobato.fastdfs.domain.StorePath;
 import com.github.tobato.fastdfs.service.FastFileStorageClient;
@@ -36,6 +38,12 @@ public class UploadService {
     @Autowired
     private ElasticsearchTemplate elasticsearchTemplate;
 
+    @Autowired
+    private ArticleService articleService;
+
+    @Autowired
+    private BlogService blogService;
+
 
 
 
@@ -57,25 +65,34 @@ public class UploadService {
                          Boolean isHot,
                          String index,
                          Long watchNum,
-                         String image)
+                         String image,
+                         Long date)
     {
 
         Blog blog = new Blog();
         blog.setTitleName(titleName);
-        blog.setSubTitle(subTitle);
+        String url = upload(file);
+        String str = blogService.mdToHtml(blogService.download(url));
+        blog.setSubTitle(str.substring(0, Math.min(280, str.length() - 1)));
         blog.setIsHot(isHot);
         blog.setIsTop(isTop);
         blog.setIndex(index);
         blog.setWatchNum(watchNum);
         blog.setImage(image);
-        blog.setCreateTime(new Date());
-        String url = upload(file);
+        Date date1 = new Date();
+        date1.setTime(date);
+        System.out.println(date1);
+        //System.out.println(new Date());
+        blog.setCreateTime(date1);
+
         blog.setFile(url);
         if(Strings.isBlank(url)){
             return 0;
         }
         int i = blogMapper.insert(blog);
         saveElasticsearch(blog);
+        System.out.println(blog.getId());
+        articleService.saveBlog(blog);
         return i;
 
 

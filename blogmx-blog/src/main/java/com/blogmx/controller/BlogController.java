@@ -2,6 +2,7 @@ package com.blogmx.controller;
 
 import com.blogmx.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,9 +26,6 @@ public class BlogController {
      */
     @GetMapping("{id}.html")
     public String toBlogPage(Model model, @PathVariable("id") Long id){
-        if(id == 0){
-            return "uploadTest";
-        }
         Map<String, Object> map = blogService.loadBlog(id);
         if(map == null){
             return "badblog";
@@ -35,6 +33,12 @@ public class BlogController {
         model.addAllAttributes(map);
         blogService.createHtml(id);
         return "read";
+    }
+
+    @GetMapping("/add/{id}")
+    public ResponseEntity<Void> toBlogPageFirst(@PathVariable("id") Long id){
+        blogService.addWatchNum(id);
+        return ResponseEntity.ok().build();
     }
 
 }

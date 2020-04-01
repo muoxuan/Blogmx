@@ -13,6 +13,7 @@ import com.vladsch.flexmark.parser.Parser;
 import com.vladsch.flexmark.parser.ParserEmulationProfile;
 import com.vladsch.flexmark.util.options.MutableDataSet;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
@@ -22,6 +23,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 @Service
 public class BlogService {
@@ -33,6 +35,12 @@ public class BlogService {
 
     @Autowired
     private TemplateEngine templateEngine;
+
+    @Autowired
+    private RedisTemplate<String, Blog> blogRedisTemplate;
+
+    @Autowired
+    private RedisTemplate<String, Date> redisTemplate;
 
     /**
      *
@@ -80,11 +88,20 @@ public class BlogService {
 
 
     public Map<String, Object> loadBlog(Long id){
-        List<Lable> lables = lableMapper.selectAll();
-        Blog blog = blogMapper.selectByPrimaryKey(id);
+        List<Lable> lables = null;
+        Blog blog = null;
+        blog = (Blog)blogRedisTemplate.opsForHash().get("blogs", id.toString());
+        if(blog == null){
+            blog = blogMapper.selectByPrimaryKey(id);
+            if(blog == null){
+                return null;
+            }
+            blogRedisTemplate.opsForHash().put("blogs", blog.getId().toString(), blog);
+        }
         if(blog == null){
             return null;
         }
+        lables = lableMapper.selectAll();
         Map<String, Object> map = new HashMap<>();
         map.put("watchNum", blog.getWatchNum());
         Date createTime = blog.getCreateTime();
@@ -154,7 +171,7 @@ public class BlogService {
         PrintWriter printWriter = null;
         try {
             //静态文件生成到nginx本地
-            File file = new File("G:\\nginx\\nginx-1.14.0\\nginx-1.14.0\\html\\" + id + ".html");
+            File file = new File("G:\\nginx\\nginx-1.14.0\\nginx-1.14.0\\html\\blog\\" + id + ".html");
             printWriter = new PrintWriter(file);
 
             templateEngine.process("read", context, printWriter);
@@ -165,6 +182,24 @@ public class BlogService {
                 printWriter.close();
             }
         }
+    }
+
+    public void addWatchNum(Long id){
+        Blog blog = (Blog)blogRedisTemplate.opsForHash().get("blogs", id.toString());
+        blogRedisTemplate.opsForHash().delete("blogs", id.toString());
+        blog.setWatchNum(blog.getWatchNum() + 1);
+        blogRedisTemplate.opsForHash().put("blogs", blog.getId().toString(), blog);
+        Date time = redisTemplate.opsForValue().get("catchDate");
+        if(time == null){
+            redisTemplate.opsForValue().set("catchDate", new Date(), 2, TimeUnit.HOURS);
+            List<Object> blogs = blogRedisTemplate.opsForHash().values("blogs");
+            for(Object obj : blogs){
+                Blog b = (Blog) obj;
+                blogMapper.updateByPrimaryKey(b);
+            }
+            //System.out.println(time.toString());
+        }
+
     }
 
 

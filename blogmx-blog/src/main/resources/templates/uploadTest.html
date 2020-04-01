@@ -45,10 +45,62 @@
     <input type="text" name="watchNum"><br>
     image
     <input type="text" name="image"><br>
-    <input type="file" name="file"><br>
+    <input type="file" name="file" id="f"><br>
+    <input type="text" name = "date" id="date">
+    <input type="button" onclick="ShowFileData()" value="获取文件创建时间">
     <input type="submit">
 </form>
-<a href="http://www.beian.miit.gov.cn" style="color: white">黑ICP备20000999号-1</a>
+<br><br><br><br>
+<input type="button" onclick="deleteAll()" value="删除所有文件">
+<input type="text" id="deleteAll" value="填写是否确认删除">
+<br><br><br>
+<input type="text" id="deleteone" value="删除博客的id">
+<input type="button" onclick="deleteone()" value="删除指定id文件">
+
+
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script language="JavaScript">
+    function ShowFileData(){
+        var s;
+        var f = document.getElementById("f").files;
+        var d=f[0].lastModified;
+        Cdate=new Date(d);
+        $("#date").val(Cdate.getTime());
+    }
+
+    function deleteAll() {
+        if($("#deleteAll").val() == "是"){
+            $.get("change/deleteAll", function(data,status){
+                if(date){
+                    alert("删除所有博客成功！");
+                }
+                else{
+                    alert("删除所有博客失败！");
+                }
+            });
+        }
+        else{
+            alert("请填写是否删除所有博客")
+        }
+    }
+    function deleteone() {
+        var id = $("#deleteone").val();
+        $.get("change/delete?id=" + id, function(data,status){
+            if(date){
+                alert("删除所有博客成功！");
+            }
+            else{
+                alert("删除所有博客失败！");
+            }
+        });
+
+    }
+
+
+</script>
+
+<a href="http://www.beian.miit.gov.cn" style="color: black">黑ICP备20000999号-1</a>
 
 </body>
 </html>

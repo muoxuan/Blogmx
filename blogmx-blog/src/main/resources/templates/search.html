@@ -28,12 +28,12 @@
                 <nav class="nav" id="nav">
                     <ul>
 						<li><a href="http://www.blogmx.cn">首页</a></li>
-						<li class="current"><a href="">博客</a></li>
-						<li><a href="message.html">留言</a></li>
+						<li class="current"><a href="http://www.blogmx.cn/article">博客</a></li>
+						<li><a href="http://www.blogmx.cn/message">留言</a></li>
 						<li><a href="link.html">友链</a></li>
                     </ul>
                 </nav>
-                <a href="/User/QQLogin" class="blog-user">
+                <a  class="blog-user" href="http://www.blogmx.cn/login">
                     <i class="fa fa-qq"></i>
                 </a>
                 <a class="phone-menu">
@@ -96,7 +96,7 @@
 			    		<ul class="category mt20" id="category">
 							<li data-index="1"><a href="http://www.blogmx.cn/article">全部文章</a></li>
 							<div th:each="lable :${lables}">
-								<li data-index="2"><a href="/Blog/Article/1/"  th:text="${lable}">个人日记</a></li>
+								<li data-index="2"><a  th:text="${lable}">个人日记</a></li>
 							</div>
 
 			    		</ul>
@@ -241,6 +241,17 @@
 				window.location.href = "http://www.blogmx.cn/article/search?key=" + curFilename;
 			}
 		}
+		window.onload = function() {
+			if(document.body.scrollTop > 0) {
+				console.log(1);
+				window.scrollTo(0, -1);
+				document.body.scrollTop = 0;
+			}
+			window.scrollTo(0, -1);
+			document.body.scrollTop = 0;
+			NProgress.done();
+		}
+
 	</script>
 </body>
 </html>

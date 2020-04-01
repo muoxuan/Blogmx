@@ -26,10 +26,11 @@ public class UploadController {
                                               @RequestParam("isHot") Boolean isHot,
                                               @RequestParam("index") String index,
                                               @RequestParam("watchNum") Long watchNum,
-                                              @RequestParam("image") String image
-                                              ){
+                                              @RequestParam("image") String image,
+                                              @RequestParam("date") Long date
+    ){
         System.out.println("111");
-        int i = uploadService.saveBlog(file, titleName, subTitle, isTop, isHot, index, watchNum, image);
+        int i = uploadService.saveBlog(file, titleName, subTitle, isTop, isHot, index, watchNum, image, date);
         if(i == 0){
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }

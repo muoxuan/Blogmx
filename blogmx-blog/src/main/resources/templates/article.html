@@ -28,13 +28,13 @@
                 <nav class="nav" id="nav">
                     <ul>
                         <li><a href="http://www.blogmx.cn">首页</a></li>
-                        <li class="current"><a href="">博客</a></li>
-                        <li><a href="message.html">留言</a></li>
+                        <li class="current"><a href="#">博客</a></li>
+                        <li><a href="http://www.blogmx.cn/message">留言</a></li>
                         <li><a href="link.html">友链</a></li>
                     </ul>
                 </nav>
-                <a href="/User/QQLogin" class="blog-user">
-                    <i class="fa fa-qq"></i>
+                <a class="blog-user" href="http://www.blogmx.cn/login">
+                    <i class="fa fa-qq" ></i>
                 </a>
                 <a class="phone-menu">
                     <i></i>
@@ -62,8 +62,6 @@
 								<span class="year fs-18 ml10">2019</span>
 							</div>
 							<div class="content">
-
-								Spire.Doc for .NET是一款由E-iceblue公司开发的专业的Word .NET类库，使用该工具开发人员可以在任意.NET平台（C#，VB.NET，ASP.NET）上快速创建，读取，写入，转换，打印Word文档。作为一个独立的Word 组件，Spire.Doc的运行无需安装Microsoft Word。而且，它可以将Microsoft Word文档创建功能集成到开发者的任何.NET应用程序。
 							</div>
 							<div class="read-more">
 								<a class="fc-black f-fwb">继续阅读</a>
@@ -94,9 +92,14 @@
 			        		<ul class="search-result"></ul>
 			    		</div>
 			    		<ul class="category mt20" id="category">
-							<li data-index="1"><a href="http://www.blogmx.cn/article">全部文章</a></li>
-							<div th:each="lable :${lables}">
-								<li data-index="2"><a href="/Blog/Article/1/"  th:text="${lable}">个人日记</a></li>
+							<div class="other-item">
+								<h5 class="other-item-title">热门文章</h5>
+								<div class="inner">
+									<ul class="hot-list-article">
+										<li th:each="h : ${hot}"> <a th:text="${h.b.titleName}" th:href="${h.url}">2018最新版QQ音乐api调用</a></li>
+
+									</ul>
+								</div>
 							</div>
 
 			    		</ul>
@@ -104,22 +107,18 @@
 					<!--右边悬浮 平板或手机设备显示-->
 					<div class="category-toggle"><i class="layui-icon">&#xe603;</i></div>
 					<div class="article-category">
-					    <div class="article-category-title">分类导航</div>
-					            <a href="/Blog/Article/1/" th:each="lable : ${lables}" th:text="${lable}">个人日记</a>
+						<div class="other-item">
+							<div class="inner">
+								<ul class="hot-list-article">
+									<li th:each="h : ${hot}"> <a th:text="${h.b.titleName}" th:href="${h.url}">2018最新版QQ音乐api调用</a></li>
 
-					    <div class="f-cb"></div>
+								</ul>
+							</div>
+						</div>
 					</div>
 					<!--遮罩-->
 					<div class="blog-mask animated layui-hide"></div>
-					<div class="other-item">
-					    <h5 class="other-item-title">热门文章</h5>
-					    <div class="inner">
-					        <ul class="hot-list-article">
-					                <li th:each="h : ${hot}"> <a th:text="${h.b.titleName}" th:href="${h.url}">2018最新版QQ音乐api调用</a></li>
 
-					        </ul>
-					    </div>
-					</div>
 					<div class="other-item">
 					    <h5 class="other-item-title">置顶推荐</h5>
 					    <div class="inner">
@@ -179,7 +178,7 @@
 					temp.find(".day").text(data[i].day);
 					temp.find(".month").text(data[i].month);
 					temp.find(".year").text(data[i].year);
-					temp.find(".content").text(data[i].b.subTitle);
+					temp.find(".content").append(data[i].b.subTitle);
 					temp.find(".fc-black").attr("href", data[i].url);
 					temp.find(".num").text(data[i].b.watchNum);
 					father.append(temp);
@@ -208,7 +207,7 @@
 									temp.find(".day").text(data[i].day);
 									temp.find(".month").text(data[i].month);
 									temp.find(".year").text(data[i].year);
-									temp.find(".content").text(data[i].b.subTitle);
+									temp.find(".content").append(data[i].b.subTitle);
 									temp.find(".fc-black").attr("href", data[i].url);
 									temp.find(".num").text(data[i].b.watchNum);
 									father.append(temp);
@@ -240,6 +239,16 @@
 				curFilename = filename;
 				window.location.href = "http://www.blogmx.cn/article/search?key=" + curFilename;
 			}
+		}
+		window.onload = function() {
+			if(document.body.scrollTop > 0) {
+				console.log(1);
+				window.scrollTo(0, -1);
+				document.body.scrollTop = 0;
+			}
+			window.scrollTo(0, -1);
+			document.body.scrollTop = 0;
+			NProgress.done();
 		}
 	</script>
 </body>

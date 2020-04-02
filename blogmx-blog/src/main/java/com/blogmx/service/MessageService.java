@@ -2,8 +2,10 @@ package com.blogmx.service;
 
 
 import com.blogmx.mapper.MessageMapper;
+import com.blogmx.mapper.UserMapper;
 import com.blogmx.pojo.Message;
 import com.blogmx.pojo.MoreMessage;
+import com.blogmx.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,9 @@ public class MessageService {
 
     @Autowired
     private MessageMapper messageMapper;
+
+    @Autowired
+    private UserMapper userMapper;
 
     public void sendMessage(String name, String message, String location, Long fatherId, Long titleId){
         Message m = new Message();
@@ -40,4 +45,9 @@ public class MessageService {
         map.put("messages", more);
         return map;
     }
+    public String getName(Long id){
+        User user = userMapper.selectByPrimaryKey(id);
+        return user.getName();
+    }
+
 }

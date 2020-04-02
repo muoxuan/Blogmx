@@ -21,7 +21,7 @@
       <module name="blogmx-image" target="1.8" />
       <module name="blogmx-registry" target="1.8" />
       <module name="blogmx-upload" target="1.8" />
-      <module name="mxblog-common" target="1.8" />
+      <module name="mxblog-common" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -31,7 +31,7 @@
       <module name="blogmx-image" options="-parameters" />
       <module name="blogmx-registry" options="-parameters" />
       <module name="blogmx-upload" options="-parameters" />
-      <module name="mxblog-common" options="-parameters" />
+      <module name="mxblog-common" options="" />
     </option>
   </component>
 </project>

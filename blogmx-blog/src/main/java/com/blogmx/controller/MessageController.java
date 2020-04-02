@@ -104,7 +104,9 @@ public class MessageController {
             return ResponseEntity.ok().build();
         }
         String name = JWT.decode(token).getAudience().get(0);
-        messageService.sendMessage(name, message, ipAddress, fatherId, 0L);
+        Long id = Long.parseLong(name);
+
+        messageService.sendMessage(messageService.getName(id), message, ipAddress, fatherId, 0L);
         try {
             response.sendRedirect("/message");
         } catch (IOException e) {

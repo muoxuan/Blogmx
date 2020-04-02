@@ -78,14 +78,34 @@ public class UserService {
     }
 
 
-    public User findUserById(String name) {
+    public User findUserById(Long id) {
         User user = new User();
-        user.setName(name);
+        user.setId(id);
         List<User> select = userMapper.select(user);
 
         if(select.size() == 0){
             return null;
         }
         return select.get(0);
+    }
+
+    public String qqLogin(String name, String password){
+        User user = new User();
+        user.setPassword(password);
+        user.setName(name);
+        user.setEmail("qqLogin");
+        List<User> select = userMapper.select(user);
+        for(User u : select){
+            if(u.getPassword().equals(user.getPassword())){
+                user = u;
+            }
+        }
+        if(select == null || select.size() == 0){
+            Long randomNum = System.currentTimeMillis();
+            user.setSalt(randomNum.toString());
+            userMapper.insert(user);
+        }
+        String token = TokenUtils.getToken(user);
+        return token;
     }
 }

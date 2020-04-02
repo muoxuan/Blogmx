@@ -63,14 +63,14 @@ public class AdminAuthenticationInterceptor implements HandlerInterceptor {
                 String name;
                 try {
                     name = JWT.decode(token).getAudience().get(0);
-                    if(!name.equals("moxuan")){
+                    if(!name.equals("3")){
                         return false;
                     }
                 } catch (JWTDecodeException j) {
                     httpServletResponse.sendRedirect("/nologin");
                     return false;
                 }
-                User user = userService.findUserById(name);
+                User user = userService.findUserById(Long.parseLong(name));
                 if (user == null) {
 
                     httpServletResponse.sendRedirect("/nologin");

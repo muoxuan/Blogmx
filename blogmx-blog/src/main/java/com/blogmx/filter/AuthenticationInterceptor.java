@@ -56,18 +56,20 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
             if (userLoginToken.required()) {
                 // 执行认证
                 if (token == null) {
+                    System.out.println("noToken");
                     httpServletResponse.sendRedirect("/nologin");
+
                     return false;
                 }
                 // 获取 token 中的 user id
-                String name;
+                Long id;
                 try {
-                    name = JWT.decode(token).getAudience().get(0);
+                    id = Long.parseLong(JWT.decode(token).getAudience().get(0));
                 } catch (JWTDecodeException j) {
                     httpServletResponse.sendRedirect("/nologin");
                     return false;
                 }
-                User user = userService.findUserById(name);
+                User user = userService.findUserById(id);
                 if (user == null) {
 
                     httpServletResponse.sendRedirect("/nologin");
@@ -78,6 +80,8 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
                 try {
                     jwtVerifier.verify(token);
                 } catch (JWTVerificationException e) {
+                    System.out.println("worng cookie");
+                    System.out.println(user.getPassword());
                     httpServletResponse.sendRedirect("/nologin");
                     return false;
                 }

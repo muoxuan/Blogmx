@@ -11,6 +11,9 @@ eureka:
 zuul:
   prefix: /api
   routes:
-    blogmx-blog: /bl/** # 路由到商品的微服务
+    blogmx-blog: /bl/** # 路由到获取博客的微服务
   add-host-header: true
   sensitive-headers: #覆盖默认敏感头信息
+  ignored-services: blogmx-blog
+
+

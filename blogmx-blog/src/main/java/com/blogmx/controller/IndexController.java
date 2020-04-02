@@ -43,11 +43,6 @@ public class IndexController {
         model.addAttribute("hotBlogs", hot);
         return "index";
     }
-    @GetMapping("/login")
-    public String getLogin(Model model, HttpServletResponse httpServletResponse){
 
-
-        return "login";
-    }
 
 }

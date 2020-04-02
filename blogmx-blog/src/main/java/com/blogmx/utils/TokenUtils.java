@@ -8,7 +8,7 @@ public class TokenUtils {
 
     public static String getToken(User user) {
         String token="";
-        token= JWT.create().withAudience(user.getName())
+        token= JWT.create().withAudience(user.getId().toString())
                 .sign(Algorithm.HMAC256(user.getPassword()));
         return token;
     }

@@ -33,21 +33,17 @@ public class ArticleService {
 
 
 
-        List<Object> blogs = null;
+        //List<Object> blogs = null;
         List<MoreBlog> list1;
-        blogs =  blogRedisTemplate.opsForHash().values("blogs");
-        if(blogs.size() != 0){
-            list1 = getMoreBlogByObjects(blogs);
-            System.out.println("从缓存中获取数据");
-        }
-        else{
+        //blogs =  blogRedisTemplate.opsForHash().values("blogs");
+            blogRedisTemplate.delete("blogs");
             List<Blog> blogs1 = blogMapper.selectAll();
             list1 = getMoreBlogByBlogs(blogs1);
             for(Blog b : blogs1){
                 blogRedisTemplate.opsForHash().put("blogs", b.getId().toString(), b);
             }
             System.out.println("数据同步...");
-        }
+
 
 
         if(rows == -1){

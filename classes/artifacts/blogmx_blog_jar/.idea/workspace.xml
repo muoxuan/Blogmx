@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6f641c1f-ce7c-4a97-abb1-b6fce09c6b5f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../.idea/artifacts/blogmx_blog_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_unknown.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../blogmx-blog/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../blogmx-blog/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../blogmx-blog/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../blogmx-blog/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../blogmx-blog/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../blogmx-blog/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../blogmx-gateway/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../blogmx-gateway/target/classes/com/blogmx/BlogmxGatewayApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../blogmx-gateway/target/classes/com/blogmx/gateway/config/BlogmxCorsConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../blogmx-registry/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../blogmx-registry/target/classes/com/blogmx/BlogmxRegistryApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../blogmx-upload/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../blogmx-upload/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../blogmx-upload/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../blogmx-upload/target/classes/com/blogmx/BlogmxUploadApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../blogmx-upload/target/classes/com/blogmx/upload/config/FastClientImporter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../blogmx-upload/target/classes/com/blogmx/upload/controller/UploadController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../blogmx-upload/target/test-classes/META-INF/blogmx-upload.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../mxblog-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../mxblog-common/pom.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="jar://$PROJECT_DIR$/blogmx-blog.jar!/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-444" />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="width" value="1045" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="blogmx_blog_jar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx_blog_jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx_blog_jar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx_blog_jar" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogmx_blog_jar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogmx_blog_jar" type="462c0819:PsiDirectoryNode" />
+              <item name="blogmx-blog.jar" type="ab9368bb:PsiFileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6f641c1f-ce7c-4a97-abb1-b6fce09c6b5f" name="Default Changelist" comment="" />
+      <created>1585750293333</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585750293333</updated>
+      <workItem from="1585750294701" duration="248000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="248000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info id="Designer" />
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Spring" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Bean Validation" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$PROJECT_DIR$/blogmx-blog.jar!/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-444" />
+      </provider>
+    </entry>
+  </component>
+</project>

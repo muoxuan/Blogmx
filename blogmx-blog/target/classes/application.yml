@@ -9,9 +9,9 @@ spring:
   thymeleaf:
     cache: false
   datasource: # 配置数据源
-    url: jdbc:mysql://47.99.81.136:3306/blogmx?characterEncoding=utf-8&autoReconnect=true
-    username: root
-    password: sjg2607794330
+    url: #JDBC基本配置
+    username: 
+    password: 
     hikari:
       minimum-idle: 3
       maximum-pool-size: 10
@@ -20,11 +20,11 @@ spring:
   data:
     elasticsearch:
       cluster-name: elasticsearch
-      cluster-nodes: 47.99.81.136:9300
+      cluster-nodes: # Elasticsearch服务地址
   redis:
-    host: 47.99.81.136
+    host: 
       # Redis服务器连接端口
-    port: 6379
+    port: 
     jedis:
       pool:
         #连接池最大连接数（使用负值表示没有限制）
@@ -55,6 +55,6 @@ fdfs:
   thumb-image: # 缩略图
     width: 60
     height: 60
-  tracker-list: 47.99.81.136:22122 # tracker地址：你的服务器地址+端口（默认是22122）
+  tracker-list: # tracker地址：你的服务器地址+端口（默认是22122）
 
 
